@@ -26,7 +26,83 @@ Most real-world data is non-linear. For example, relationships between house pri
 Activation functions enable neural networks to learn these non-linear relationships by introducing non-linear behaviors through activation functions. This greatly increases the flexibility and power of neural networks to model complex and nuanced data.
 
 # Types of Activation Functions
-Sigmoid Function: The sigmoid function is a type of logistic function that maps input values to a range between 0 and 1. It's often used to produce probabilities in binary classification problems. The formula for the sigmoid function is:
-![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/1508466e-48a0-462b-b827-b367454c5e45)
+
+### Sigmoid Function: 
+The sigmoid function is a type of logistic function that maps input values to a range between 0 and 1. It's often used to produce probabilities in binary classification problems. The formula for the sigmoid function is:
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/554f0bbd-9094-4259-8522-596092130d95)
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/fed514d6-3e7a-43cf-b0ef-4b3cd5d41889)
+
+### Tanh Function:
+The hyperbolic tangent function, or tanh, is similar to the sigmoid function but maps input values to a range between -1 and 1. It is symmetric around the origin and is commonly used in neural networks. The formula for the tanh function is:
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/2b723e27-a05b-4f28-b5f4-674721764a55)
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/077f7ce8-b46c-44b0-b375-af02fe2c8b42)
+
+### Rectified Linear Unit (ReLU): 
+ReLU is a simple and widely used activation function that outputs the input directly if it is positive, and zero otherwise. It has been found to accelerate the convergence of stochastic gradient descent during training. The formula for ReLU is:
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/876081cb-bd5b-4680-abe5-589b883d5737)
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/57003530-03bd-4b52-97a1-b5188cd069ed)
+
+### Leaky ReLU:
+Leaky ReLU is a variation of the ReLU activation function that allows a small, positive gradient when the input is negative, which helps address the "dying ReLU" problem where neurons may become inactive during training. The formula is:
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/54482528-463d-4079-b878-5da4c8d2e0b6)
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/c2037366-bffa-46b3-805b-bcbe222a00cc)
+
+
+### Parametric ReLU: 
+Parametric ReLU (PReLU) is similar to Leaky ReLU, but instead of using a fixed slope for negative inputs, it allows the slope to be learned during training.
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/8a167616-3091-4cd0-a608-e806a98de820)
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/47e13192-6c12-4582-a005-4afd0ec2fac6)
+
+
+### Exponential Linear Unit (ELU): 
+ELU is an activation function that smoothly saturates to a negative value for inputs less than zero, which helps alleviate the vanishing gradient problem. The formula for ELU is:
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/79280a91-0b57-4bf4-a03e-04ec6056babf)
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/c9e83133-c1ba-4743-85d7-4705b91648b8)
+
+
+
+### Scaled Exponential Linear Unit (SELU): 
+SELU is a variation of ELU that introduces a self-normalizing property, meaning that the output of each layer will preserve a mean of 0 and a standard deviation of 1, which can help stabilize training in deep neural networks.
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/2b175f09-a48f-4a4e-9501-942ba4b111b1)
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/2aaba150-2931-416d-8e33-503d06f9f60c)
+
+
+
+### Softmax Function:
+Softmax Function is used output layers for multi-class classification. Output probabilities for each class, summing to 1. This activation function ensures valid probability distribution for predictions.
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/92540ca4-389b-47a2-abc2-91854b825c61)
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/d7863f08-1494-4068-ab18-0c9f35dbfdc0)
+
+
+## References
+https://www.datacamp.com/tutorial/introduction-to-activation-functions-in-neural-networks
+https://medium.com/@sruthy.sn91/understanding-activation-functions-in-deep-learning-1e3728eeaee
+https://ml-explained.com/blog/activation-functions-explained
+
+
+
+
+
+
+
+
+
+
 
 
