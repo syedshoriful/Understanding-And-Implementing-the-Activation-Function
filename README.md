@@ -89,6 +89,33 @@ Softmax Function is used output layers for multi-class classification. Output pr
 
 ![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/d7863f08-1494-4068-ab18-0c9f35dbfdc0)
 
+## Calculate the derivative of the Activation Function and explain it's significance in the backpropgation process.
+Let's take the derivative of the ReLU activation function as an example, since it's one of the most commonly used activation functions. The ReLU function is defined as:
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/4827dc43-fdf2-4cf4-a570-17ba3118d62b)
+
+
+To calculate its derivative, we need to consider its piecewise nature:
+
+![image](https://github.com/syedshoriful/Understanding-And-Implementing-the-Activation-Function/assets/94040527/5eb0df67-9fc2-4a6d-aea9-46eba0ea9bf0)
+
+
+This derivative indicates that if the input to the ReLU function is positive, the derivative is 1, and if the input is negative or zero, the derivative is 0.
+
+The significance of the derivative in the backpropagation process lies in the computation of gradients used to update the weights of the neural network during training. Here's how it works:
+
+1. **Forward Pass**:
+   - During the forward pass, the activations of each neuron are computed using the ReLU function.
+   - These activations are then fed forward through the network to compute the output.
+
+2. **Backward Pass (Backpropagation)**:
+   - In the backward pass, the gradient of the loss function with respect to the output of the neuron is computed.
+   - This gradient is then backpropagated through the network to compute the gradients of the loss function with respect to the weights of each neuron.
+   - The chain rule of calculus is used to compute these gradients, where the derivative of the activation function plays a crucial role.
+   - For neurons that use ReLU activation, if the input was positive during the forward pass (i.e., \(x > 0\)), the gradient is preserved (i.e., \(f'(x) = 1\)). This means that the gradient flows through the neuron unaffected.
+   - However, if the input was negative or zero during the forward pass (i.e., \(x ≤ 0\)), the gradient becomes 0. This effectively stops the gradient flow through the neuron, preventing any updates to the weights of that neuron. This property is what helps mitigate the vanishing gradient problem, as it prevents gradients from becoming too small.
+
+In summary, the derivative of the activation function is crucial in backpropagation for computing gradients, which are used to update the weights of the neural network. For ReLU and similar activation functions, the derivative controls the flow of gradients during backpropagation, allowing effective training by preventing the vanishing gradient problem.
 
 ## References
 https://www.datacamp.com/tutorial/introduction-to-activation-functions-in-neural-networks
